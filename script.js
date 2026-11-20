@@ -34,7 +34,6 @@ let year, day, month, date, hours, minutes, seconds;
 
 const getTime = () => {
   const now = new Date();
-  now.setHours(0);
   day = days[now.getDay()];
   month = months[now.getMonth()];
   date = now.getDate();
