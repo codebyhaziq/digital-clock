@@ -35,6 +35,7 @@ const getTime = () => {
   const now = new Date();
   minute = now.getMinutes();
   second = now.getSeconds();
+  // now.setHours(24)
   currentHour = now.getHours();
   date = now.getDate();
   month = months[now.getMonth()];
@@ -45,6 +46,9 @@ const getTime = () => {
     displayHour = currentHour;
   } else {
     displayHour = currentHour % 12;
+    if (displayHour === 0) {
+      displayHour = 12
+    }
   }
 
   if (is24Hour) {
